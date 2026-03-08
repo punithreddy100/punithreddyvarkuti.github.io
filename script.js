@@ -1,19 +1,13 @@
-function openModal(id){
-document.getElementById(id).style.display="block";
-}
-
-function closeModal(id){
-document.getElementById(id).style.display="none";
-}
-
-window.onclick = function(event){
-
-let modals = document.querySelectorAll(".modal");
-
-modals.forEach(modal=>{
-if(event.target==modal){
-modal.style.display="none";
-}
-})
-
-}
+// Fade-in animation for cards on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card, index) => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(20px)';
+    setTimeout(() => {
+      card.style.transition = 'all 0.6s ease';
+      card.style.opacity = 1;
+      card.style.transform = 'translateY(0)';
+    }, index * 150);
+  });
+});
