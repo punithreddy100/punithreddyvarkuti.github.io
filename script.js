@@ -1,13 +1,19 @@
-function openTab(tabId){
+function openModal(id){
+document.getElementById(id).style.display="block";
+}
 
-let contents = document.querySelectorAll(".tab-content");
-let tabs = document.querySelectorAll(".tab");
+function closeModal(id){
+document.getElementById(id).style.display="none";
+}
 
-contents.forEach(c => c.classList.remove("active"));
-tabs.forEach(t => t.classList.remove("active"));
+window.onclick = function(event){
 
-document.getElementById(tabId).classList.add("active");
+let modals = document.querySelectorAll(".modal");
 
-event.target.classList.add("active");
+modals.forEach(modal=>{
+if(event.target==modal){
+modal.style.display="none";
+}
+})
 
 }
