@@ -10,11 +10,19 @@ font-size:42px;
 margin-bottom:10px;
 }
 
+/* ML vs DL comparison layout */
+
 .comparison{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:1fr 1fr;
 gap:30px;
 margin-top:40px;
+}
+
+@media(max-width:900px){
+.comparison{
+grid-template-columns:1fr;
+}
 }
 
 .example{
