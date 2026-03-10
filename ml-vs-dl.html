@@ -6,9 +6,102 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Machine Learning vs Deep Learning</title>
+<title>Machine Learning vs Deep Learning | Punith Reddy</title>
 
 <link rel="stylesheet" href="styles.css">
+
+<style>
+
+/* PAGE TITLE */
+
+.page-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.page-title h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+/* SIDE BY SIDE COMPARISON */
+
+.comparison{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-top:40px;
+}
+
+/* CARDS */
+
+.compare-card{
+background:#1f2937;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.compare-card h2{
+color:#22c55e;
+margin-bottom:15px;
+}
+
+/* EXAMPLES BOX */
+
+.example{
+margin-top:20px;
+padding:18px;
+background:#111827;
+border-radius:10px;
+}
+
+/* TABLE */
+
+.table-section{
+margin-top:60px;
+}
+
+.comparison-table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+background:#1f2937;
+border-radius:10px;
+overflow:hidden;
+}
+
+.comparison-table th{
+background:#111827;
+color:#22c55e;
+}
+
+.comparison-table th,
+.comparison-table td{
+padding:15px;
+border-bottom:1px solid #374151;
+text-align:left;
+}
+
+.comparison-table tr:hover{
+background:#111827;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.comparison{
+grid-template-columns:1fr;
+}
+
+.page-title h1{
+font-size:32px;
+}
+
+}
+
+</style>
 
 </head>
 
@@ -24,50 +117,70 @@
 
 </header>
 
+
 <section class="section">
 
-<div class="title">
+<div class="page-title">
 
 <h1>Machine Learning vs Deep Learning</h1>
 
 <p>
-Understanding the differences between traditional Machine Learning and
-Deep Learning approaches.
+Understanding the differences between traditional Machine Learning
+and modern Deep Learning approaches used in artificial intelligence.
 </p>
 
 </div>
 
+
+<!-- SIDE BY SIDE SECTION -->
+
 <div class="comparison">
 
-<div class="card">
+
+<!-- MACHINE LEARNING -->
+
+<div class="compare-card">
 
 <h2>Machine Learning</h2>
 
+<p>
+Machine Learning (ML) is a subset of Artificial Intelligence that enables
+computers to learn patterns from data and improve performance without
+being explicitly programmed for every task.
+</p>
+
 <ul>
 
-<li>Subset of Artificial Intelligence</li>
-
-<li>Uses algorithms to learn patterns from data</li>
-
+<li>Uses statistical algorithms to detect patterns</li>
 <li>Requires manual feature engineering</li>
-
-<li>Works well with smaller datasets</li>
-
-<li>Faster to train</li>
+<li>Works well with structured datasets</li>
+<li>Requires smaller datasets compared to deep learning</li>
+<li>Training is faster and computationally cheaper</li>
 
 </ul>
 
 <div class="example">
 
-<strong>Examples:</strong>
+<strong>Common Algorithms</strong>
 
 <ul>
 
-<li>Spam email detection</li>
+<li>Linear Regression</li>
+<li>Decision Trees</li>
+<li>Random Forest</li>
+<li>Support Vector Machines (SVM)</li>
+<li>K-Nearest Neighbors (KNN)</li>
 
-<li>Credit risk prediction</li>
+</ul>
 
-<li>Recommendation systems</li>
+<strong>Real-World Applications</strong>
+
+<ul>
+
+<li>Email spam detection</li>
+<li>Fraud detection systems</li>
+<li>Recommendation engines (Netflix, Amazon)</li>
+<li>Customer churn prediction</li>
 
 </ul>
 
@@ -75,35 +188,51 @@ Deep Learning approaches.
 
 </div>
 
-<div class="card">
+
+<!-- DEEP LEARNING -->
+
+<div class="compare-card">
 
 <h2>Deep Learning</h2>
 
+<p>
+Deep Learning (DL) is a specialized branch of Machine Learning that uses
+artificial neural networks with multiple layers to automatically learn
+complex representations from large amounts of data.
+</p>
+
 <ul>
 
-<li>Subset of Machine Learning</li>
-
-<li>Uses neural networks with many layers</li>
-
-<li>Automatically extracts features</li>
-
-<li>Requires large datasets</li>
-
-<li>Needs more computational power</li>
+<li>Uses multi-layer neural networks</li>
+<li>Automatically extracts features from raw data</li>
+<li>Excels at unstructured data like images, text, and audio</li>
+<li>Requires very large datasets</li>
+<li>Needs powerful hardware like GPUs or TPUs</li>
 
 </ul>
 
 <div class="example">
 
-<strong>Examples:</strong>
+<strong>Common Architectures</strong>
+
+<ul>
+
+<li>Convolutional Neural Networks (CNN)</li>
+<li>Recurrent Neural Networks (RNN)</li>
+<li>Long Short-Term Memory (LSTM)</li>
+<li>Transformers</li>
+
+</ul>
+
+<strong>Real-World Applications</strong>
 
 <ul>
 
 <li>Self-driving cars</li>
-
-<li>Image recognition</li>
-
-<li>Voice assistants</li>
+<li>Facial recognition systems</li>
+<li>Voice assistants (Siri, Alexa)</li>
+<li>Medical image analysis</li>
+<li>Natural language processing</li>
 
 </ul>
 
@@ -113,6 +242,8 @@ Deep Learning approaches.
 
 </div>
 
+
+<!-- COMPARISON TABLE -->
 
 <div class="table-section">
 
@@ -128,39 +259,53 @@ Deep Learning approaches.
 
 <tr>
 <td>Data Requirement</td>
-<td>Small to Medium</td>
-<td>Very Large</td>
+<td>Small to Medium datasets</td>
+<td>Very Large datasets</td>
 </tr>
 
 <tr>
 <td>Feature Engineering</td>
-<td>Manual</td>
-<td>Automatic</td>
+<td>Manual feature extraction</td>
+<td>Automatic feature learning</td>
 </tr>
 
 <tr>
 <td>Training Time</td>
-<td>Faster</td>
-<td>Slower</td>
+<td>Faster training</td>
+<td>Slower training due to complex networks</td>
 </tr>
 
 <tr>
 <td>Hardware</td>
-<td>CPU</td>
-<td>GPU / TPU</td>
+<td>CPU usually sufficient</td>
+<td>Requires GPU / TPU acceleration</td>
+</tr>
+
+<tr>
+<td>Interpretability</td>
+<td>More interpretable models</td>
+<td>Often considered a "black box"</td>
 </tr>
 
 <tr>
 <td>Common Models</td>
-<td>Decision Trees, SVM, Linear Regression</td>
+<td>Decision Trees, SVM, Regression</td>
 <td>CNN, RNN, Transformers</td>
+</tr>
+
+<tr>
+<td>Best For</td>
+<td>Structured data problems</td>
+<td>Images, speech, text, and complex patterns</td>
 </tr>
 
 </table>
 
 </div>
 
+
 </section>
+
 
 <footer>
 
@@ -168,5 +313,7 @@ Deep Learning approaches.
 
 </footer>
 
+
 </body>
+
 </html>
