@@ -1,138 +1,325 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Neural Networks: Pattern-Mimicking Machine</title>
+
+<link rel="stylesheet" href="styles.css">
 
 <style>
 
-body{
-font-family:Inter, sans-serif;
-line-height:1.7;
-margin:40px auto;
-max-width:900px;
-background:#0b0f19;
-color:#e5e7eb;
+/* ARTICLE LAYOUT */
+
+.article-container{
+max-width:1000px;
+margin:120px auto;
+padding:0 20px;
 }
 
-h1{
-font-size:38px;
-margin-bottom:10px;
+/* TITLE */
+
+.paper-header{
+margin-bottom:40px;
+}
+
+.paper-header h1{
+font-size:42px;
 color:#a78bfa;
+margin-bottom:10px;
+font-family:"Space Grotesk",sans-serif;
 }
 
-h2{
-margin-top:35px;
-color:#7c3aed;
+.subtitle{
+font-size:18px;
+color:#d1d5db;
+margin-bottom:25px;
 }
 
-p{
-margin-top:10px;
+.meta{
+color:#9ca3af;
+font-size:14px;
+margin-bottom:5px;
+}
+
+/* ARTICLE GRID */
+
+.paper-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-top:40px;
+}
+
+@media(max-width:900px){
+.paper-grid{
+grid-template-columns:1fr;
+}
+}
+
+/* PAPER CARDS */
+
+.paper-card{
+
+background:linear-gradient(145deg,#111827,#1f2937);
+padding:30px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,0.05);
+box-shadow:0 15px 35px rgba(0,0,0,0.5);
+transition:.35s;
+}
+
+.paper-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 60px rgba(0,0,0,0.8);
+}
+
+.paper-card h2{
+color:#22d3ee;
+margin-bottom:15px;
+font-size:22px;
+font-family:"Space Grotesk",sans-serif;
+}
+
+.paper-card p{
+line-height:1.7;
+color:#d1d5db;
+margin-bottom:10px;
+}
+
+.paper-card ul{
+margin-left:20px;
+line-height:1.7;
 color:#d1d5db;
 }
 
-ul{
-margin-top:10px;
-margin-left:20px;
-}
+/* CONCLUSION */
 
-footer{
-margin-top:60px;
-color:#9ca3af;
-font-size:14px;
+.conclusion{
+margin-top:50px;
 }
 
 </style>
 
 </head>
 
-
 <body>
-    <header>
 
-<h2>Punith Reddy</h2>
+<div class="article-container">
 
-<nav>
-<a href="index.html">← Back to Portfolio</a>
-</nav>
+<a href="index.html" class="link">← Back to Portfolio</a>
 
-</header>
+<div class="paper-header">
 
 <h1>Neural Networks: Pattern-Mimicking Machine</h1>
 
-<h3>A Simple Explanation of Artificial Intelligence's Core Technology</h3>
+<p class="subtitle">
+A Conceptual and Technical Overview of Artificial Intelligence's Core Learning Mechanism
+</p>
 
-<p><strong>Author:</strong> Punith Reddy</p>
+<p class="meta"><strong>Author:</strong> Punith Reddy</p>
 
-<p><strong>Inspired by:</strong> "If you can't explain it simply, you don't understand it well enough."</p>
+<p class="meta">
+<strong>Motivation:</strong> Inspired by the principle that if a complex idea cannot be explained simply, it is not fully understood.
+</p>
+
+</div>
+
+<!-- ABSTRACT -->
+
+<div class="paper-card">
 
 <h2>Abstract</h2>
 
 <p>
-This article provides a foundational understanding of neural networks
-using the analogy of a child learning to recognize animals.
-Complex AI concepts are simplified into neurons, layers,
-and learning processes.
+
+Artificial neural networks constitute one of the foundational computational
+models driving modern artificial intelligence. Despite their widespread
+application in fields such as computer vision, natural language processing,
+and predictive analytics, the underlying mechanisms often appear opaque to
+new learners.
+
 </p>
 
-<h2>1. Learning by Example</h2>
+<p>
+
+This article presents an intuitive yet technically grounded explanation of
+neural networks using a pedagogical analogy: a child learning to recognize
+animals through observation and repeated feedback. Through this framework,
+we describe the core architectural components of neural networks, including
+neurons, network layers, and optimization procedures.
+
+</p>
+
+</div>
+
+<!-- GRID CONTENT -->
+
+<div class="paper-grid">
+
+<div class="paper-card">
+
+<h2>1. Learning Through Examples</h2>
 
 <p>
-Imagine teaching a child the difference between a cat and a dog.
-Instead of definitions, you show examples.
+
+Human learning frequently occurs through exposure to examples rather than
+explicit rule-based instruction. For instance, when teaching a child to
+differentiate between cats and dogs, we typically present visual examples
+rather than formal definitions.
+
+</p>
+
+<p>
+
+Over time the child begins to internalize patterns such as ear shape,
+snout length, or vocal sounds.
+
 </p>
 
 <ul>
-<li>Cats have pointy ears</li>
-<li>Dogs have longer snouts</li>
-<li>Cats meow, dogs bark</li>
+<li>Cats tend to have shorter snouts and triangular ears</li>
+<li>Dogs often possess longer snouts and different posture</li>
+<li>Vocal signals such as meowing or barking reinforce recognition</li>
 </ul>
 
 <p>
-After seeing many examples the child recognizes patterns.
-Neural networks learn the same way — by observing data.
+
+Artificial neural networks replicate this process computationally by
+learning statistical relationships between input features and labeled
+examples.
+
 </p>
 
-<h2>2. Artificial Neuron</h2>
+</div>
+
+<div class="paper-card">
+
+<h2>2. Artificial Neurons</h2>
+
+<p>
+
+The fundamental computational unit of a neural network is the artificial
+neuron. Conceptually inspired by biological neurons, this unit aggregates
+incoming signals and transforms them through a mathematical function.
+
+</p>
 
 <ul>
-<li>Inputs – data features</li>
-<li>Weights – importance of inputs</li>
-<li>Bias – flexibility for decisions</li>
-<li>Activation Function – determines output</li>
+<li><strong>Inputs</strong> – numerical representations of data features</li>
+<li><strong>Weights</strong> – parameters determining feature importance</li>
+<li><strong>Bias</strong> – an adjustable offset enabling flexible boundaries</li>
+<li><strong>Activation Function</strong> – introduces non-linearity to the model</li>
 </ul>
+
+<p>
+
+The neuron's output represents a transformed version of the input signal,
+which is then propagated to subsequent neurons within the network.
+
+</p>
+
+</div>
+
+<div class="paper-card">
 
 <h2>3. Network Architecture</h2>
 
+<p>
+
+Individually, neurons perform simple transformations. However, when arranged
+in layered structures they become capable of modeling complex nonlinear
+relationships.
+
+</p>
+
 <ul>
-<li>Input Layer – receives data</li>
-<li>Hidden Layers – pattern detection</li>
-<li>Output Layer – final prediction</li>
+<li><strong>Input Layer</strong> – receives raw feature vectors</li>
+<li><strong>Hidden Layers</strong> – progressively extract abstract patterns</li>
+<li><strong>Output Layer</strong> – produces final prediction probabilities</li>
 </ul>
 
-<h2>4. Training Process</h2>
+<p>
+
+Deep neural networks extend this architecture with multiple hidden layers,
+allowing the system to learn hierarchical feature representations.
+
+</p>
+
+</div>
+
+<div class="paper-card">
+
+<h2>4. Learning via Optimization</h2>
+
+<p>
+
+The learning process of a neural network involves iteratively adjusting its
+parameters in order to minimize prediction error.
+
+</p>
+
+<p>
+
+This occurs through a multi-step training cycle:
+
+</p>
 
 <ul>
-<li>Forward pass</li>
-<li>Error calculation</li>
-<li>Backpropagation</li>
-<li>Weight update</li>
+<li>Forward propagation to generate predictions</li>
+<li>Loss computation to quantify prediction error</li>
+<li>Backpropagation to distribute error signals</li>
+<li>Gradient-based optimization to update weights</li>
 </ul>
+
+<p>
+
+Over numerous iterations the network converges toward parameter values that
+capture underlying patterns present in the data.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- CONCLUSION -->
+
+<div class="paper-card conclusion">
 
 <h2>Conclusion</h2>
 
 <p>
-Neural networks are powerful pattern recognition systems
-that enable modern AI technologies such as image recognition,
-speech processing, and natural language understanding.
+
+Neural networks should not be interpreted as literal digital brains but
+rather as powerful mathematical frameworks capable of learning complex
+patterns from large datasets.
+
 </p>
 
-<footer>
+<p>
 
-© 2025 Punith Reddy | All Rights Reserved
+Their capacity to autonomously discover hierarchical feature structures
+has made them the dominant paradigm in contemporary machine learning.
+Applications now span diverse domains including medical diagnostics,
+autonomous systems, recommendation engines, and language modeling.
 
-</footer>
+</p>
+
+<p>
+
+Developing a strong conceptual understanding of these mechanisms enables
+engineers and researchers to design more effective, interpretable, and
+scalable AI systems.
+
+</p>
+
+</div>
+
+</div>
 
 </body>
 </html>
