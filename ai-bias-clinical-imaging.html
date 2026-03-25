@@ -5,6 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Bias in Clinical Imaging | Punith Reddy</title>
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .hero-title h1 {
+      font-size: 2.2rem;
+    }
+
+    .hero-title p {
+      color: #555;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      color: #444;
+    }
+
+    .card ul {
+      margin-left: 20px;
+    }
+
+    .highlight {
+      border-left: 4px solid #0077ff;
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -18,125 +78,124 @@
   </nav>
 </header>
 
-<section class="section">
-  <h1>Problems of Confusion: AI Bias in Clinical Diagnostic Imaging</h1>
+<section class="section container">
 
-  <p>
-    Artificial Intelligence (AI) has significantly transformed clinical diagnostic imaging,
-    enabling faster and often more accurate detection of diseases through technologies such
-    as X-rays, MRIs, and CT scans. However, despite its potential, AI systems are not free
-    from error. One of the most critical challenges is <strong>bias</strong>, which can lead
-    to incorrect diagnoses, unequal healthcare outcomes, and reduced trust in AI systems.
-  </p>
+  <!-- HERO -->
+  <div class="hero-title">
+    <h1>Problems of Confusion: AI Bias in Clinical Diagnostic Imaging</h1>
+    <p>
+      Exploring how bias in AI-powered medical imaging systems impacts diagnostic accuracy,
+      fairness, and real-world healthcare outcomes.
+    </p>
+  </div>
 
-  <h2>1. What is AI Bias in Clinical Imaging?</h2>
-  <p>
-    AI bias occurs when a machine learning model produces systematically unfair or inaccurate
-    results due to imbalances in training data, flawed assumptions, or limitations in design.
-    In clinical imaging, this means an AI system may perform well for some populations but
-    poorly for others.
-  </p>
+  <!-- GRID START -->
+  <div class="grid-2">
 
-  <ul>
-    <li>Misdiagnosis in underrepresented populations</li>
-    <li>Over-reliance on patterns from dominant datasets</li>
-    <li>Reduced generalization to real-world clinical settings</li>
-  </ul>
+    <!-- CARD 1 -->
+    <div class="card">
+      <h2>What is AI Bias?</h2>
+      <p>
+        AI bias refers to systematic errors in machine learning models that result in unfair
+        or inaccurate predictions. In clinical imaging, this leads to unequal diagnostic
+        performance across patient populations.
+      </p>
 
-  <h2>2. Sources of Bias</h2>
+      <ul>
+        <li>Misdiagnosis in underrepresented groups</li>
+        <li>Overfitting to dominant datasets</li>
+        <li>Poor generalization in real-world settings</li>
+      </ul>
+    </div>
 
-  <h3>Data Bias</h3>
-  <p>
-    Most medical imaging datasets are not diverse. For example, datasets may contain
-    predominantly images from certain age groups, ethnicities, or geographic regions.
-    This leads to models that fail when exposed to unseen populations.
-  </p>
+    <!-- CARD 2 -->
+    <div class="card">
+      <h2>Sources of Bias</h2>
 
-  <h3>Labeling Bias</h3>
-  <p>
-    Human experts annotate training data. Differences in interpretation between radiologists
-    can introduce inconsistencies, which the model learns as truth.
-  </p>
+      <h3>Data Bias</h3>
+      <p>Datasets lack diversity across age, ethnicity, and geography.</p>
 
-  <h3>Algorithmic Bias</h3>
-  <p>
-    Some models may prioritize accuracy for the majority class while neglecting minority cases,
-    leading to skewed predictions.
-  </p>
+      <h3>Labeling Bias</h3>
+      <p>Radiologist interpretation differences create inconsistent labels.</p>
 
-  <h2>3. Real-World Impact</h2>
+      <h3>Algorithmic Bias</h3>
+      <p>Models prioritize majority classes over minority cases.</p>
+    </div>
 
-  <p>
-    Bias in clinical AI is not just a technical issue—it directly affects patient outcomes.
-  </p>
+    <!-- CARD 3 -->
+    <div class="card">
+      <h2>Real-World Impact</h2>
 
-  <ul>
-    <li>Delayed or incorrect diagnoses</li>
-    <li>Health disparities across demographic groups</li>
-    <li>Loss of trust in AI-driven healthcare tools</li>
-  </ul>
+      <ul>
+        <li>Delayed or incorrect diagnoses</li>
+        <li>Healthcare inequality</li>
+        <li>Reduced trust in AI systems</li>
+      </ul>
 
-  <p>
-    For example, an AI system trained mostly on lighter skin tones may struggle to detect
-    conditions in darker skin, leading to unequal care.
-  </p>
+      <div class="highlight">
+        Example: Models trained on limited skin tone data may fail on diverse populations.
+      </div>
+    </div>
 
-  <h2>4. The Problem of Confusion</h2>
+    <!-- CARD 4 -->
+    <div class="card">
+      <h2>The Problem of Confusion</h2>
 
-  <p>
-    Confusion in AI systems arises when models cannot clearly distinguish between similar
-    patterns. In medical imaging, this can mean:
-  </p>
+      <p>
+        AI systems often struggle to distinguish between similar patterns in imaging data.
+      </p>
 
-  <ul>
-    <li>Misclassifying benign vs malignant tumors</li>
-    <li>Confusing noise or artifacts with disease indicators</li>
-    <li>Overfitting to irrelevant visual features</li>
-  </ul>
+      <ul>
+        <li>Benign vs malignant tumor confusion</li>
+        <li>Noise interpreted as disease</li>
+        <li>Overfitting to irrelevant features</li>
+      </ul>
+    </div>
 
-  <p>
-    This “confusion” is often amplified by biased training data, making errors more frequent
-    in certain groups.
-  </p>
+    <!-- CARD 5 -->
+    <div class="card">
+      <h2>Ethical Concerns</h2>
 
-  <h2>5. Ethical Concerns</h2>
+      <ul>
+        <li>Fairness across all patients</li>
+        <li>Accountability for AI decisions</li>
+        <li>Safety in clinical deployment</li>
+      </ul>
 
-  <p>
-    The presence of bias raises serious ethical questions:
-  </p>
+      <p class="highlight">
+        Ethical AI requires transparency, monitoring, and human oversight.
+      </p>
+    </div>
 
-  <ul>
-    <li>Is the AI system fair to all patients?</li>
-    <li>Who is responsible for incorrect diagnoses?</li>
-    <li>Can biased AI systems be safely deployed in healthcare?</li>
-  </ul>
+    <!-- CARD 6 -->
+    <div class="card">
+      <h2>Solutions</h2>
 
-  <p>
-    Responsible AI development requires transparency, accountability, and continuous monitoring.
-  </p>
+      <ul>
+        <li><strong>Diverse Data:</strong> Improve representation</li>
+        <li><strong>Bias Testing:</strong> Evaluate across demographics</li>
+        <li><strong>Explainable AI:</strong> Understand model decisions</li>
+        <li><strong>Human-in-the-loop:</strong> Keep clinicians involved</li>
+      </ul>
+    </div>
 
-  <h2>6. Solutions and Mitigation Strategies</h2>
+    <!-- CARD 7 -->
+    <div class="card" style="grid-column: span 2;">
+      <h2>Reflection</h2>
 
-  <ul>
-    <li><strong>Diverse Datasets:</strong> Ensure representation across populations</li>
-    <li><strong>Bias Testing:</strong> Evaluate models on different demographic groups</li>
-    <li><strong>Explainable AI:</strong> Improve interpretability of decisions</li>
-    <li><strong>Human Oversight:</strong> Keep clinicians involved in decision-making</li>
-  </ul>
+      <p>
+        This project emphasizes that AI in healthcare must go beyond accuracy.
+        Fairness, transparency, and ethical responsibility are critical for
+        building trustworthy systems.
+      </p>
 
-  <h2>7. Reflection</h2>
+      <p>
+        As an aspiring AI/ML engineer, I recognize the importance of designing
+        systems that enhance human decision-making while minimizing risk and bias.
+      </p>
+    </div>
 
-  <p>
-    This artifact highlights the importance of building AI systems that are not only accurate
-    but also fair and trustworthy. As an aspiring AI/ML engineer, understanding bias is essential
-    to developing responsible technologies that positively impact society.
-  </p>
-
-  <p>
-    AI should enhance human decision-making—not replace it—and must be designed with ethical
-    considerations at its core.
-  </p>
-
+  </div>
 </section>
 
 <footer>
