@@ -1,325 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Neural Networks: Pattern-Mimicking Machine</title>
-
-<link rel="stylesheet" href="styles.css">
-
+<title>Neural Networks Artifact | Punith Reddy</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 <style>
+body{margin:0;font-family:"Space Grotesk",sans-serif;background:#020617;color:#e5e7eb;}
+header{display:flex;justify-content:space-between;padding:20px 40px;border-bottom:1px solid #1f2937;}
+header a{color:#22d3ee;text-decoration:none;}
+.section{padding:60px 40px;max-width:1100px;margin:auto;}
+.page-title{text-align:center;margin-bottom:50px;}
+.page-title h1{font-size:44px;background:linear-gradient(90deg,#a78bfa,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.page-title p{color:#9ca3af;max-width:750px;margin:auto;line-height:1.7;}
 
-/* ARTICLE LAYOUT */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;}
+.card{background:#0f172a;padding:28px;border-radius:18px;border:1px solid #1f2937;transition:.3s;}
+.card:hover{transform:translateY(-6px);}
+.card h3{color:#22d3ee;margin-bottom:12px;}
+.card p{color:#cbd5f5;line-height:1.8;font-size:15px;}
+.full{grid-column:1/-1;}
+ul{padding-left:20px;line-height:1.8;color:#cbd5f5;}
 
-.article-container{
-max-width:1000px;
-margin:120px auto;
-padding:0 20px;
-}
+.article{margin-top:60px;}
+.article h2{color:#a78bfa;margin-bottom:10px;}
+.article p{color:#d1d5db;line-height:1.8;}
 
-/* TITLE */
+footer{text-align:center;padding:20px;border-top:1px solid #1f2937;margin-top:40px;}
 
-.paper-header{
-margin-bottom:40px;
-}
-
-.paper-header h1{
-font-size:42px;
-color:#a78bfa;
-margin-bottom:10px;
-font-family:"Space Grotesk",sans-serif;
-}
-
-.subtitle{
-font-size:18px;
-color:#d1d5db;
-margin-bottom:25px;
-}
-
-.meta{
-color:#9ca3af;
-font-size:14px;
-margin-bottom:5px;
-}
-
-/* ARTICLE GRID */
-
-.paper-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-margin-top:40px;
-}
-
-@media(max-width:900px){
-.paper-grid{
-grid-template-columns:1fr;
-}
-}
-
-/* PAPER CARDS */
-
-.paper-card{
-
-background:linear-gradient(145deg,#111827,#1f2937);
-padding:30px;
-border-radius:16px;
-border:1px solid rgba(255,255,255,0.05);
-box-shadow:0 15px 35px rgba(0,0,0,0.5);
-transition:.35s;
-}
-
-.paper-card:hover{
-transform:translateY(-8px);
-box-shadow:0 25px 60px rgba(0,0,0,0.8);
-}
-
-.paper-card h2{
-color:#22d3ee;
-margin-bottom:15px;
-font-size:22px;
-font-family:"Space Grotesk",sans-serif;
-}
-
-.paper-card p{
-line-height:1.7;
-color:#d1d5db;
-margin-bottom:10px;
-}
-
-.paper-card ul{
-margin-left:20px;
-line-height:1.7;
-color:#d1d5db;
-}
-
-/* CONCLUSION */
-
-.conclusion{
-margin-top:50px;
-}
-
+@media(max-width:900px){.grid{grid-template-columns:1fr;}}
 </style>
-
 </head>
 
 <body>
+<header>
+<h2>Punith Reddy</h2>
+<a href="index.html">← Back to Portfolio</a>
+</header>
 
-<div class="article-container">
+<section class="section">
 
-<a href="index.html" class="link">← Back to Portfolio</a>
-
-<div class="paper-header">
-
-<h1>Neural Networks: Pattern-Mimicking Machine</h1>
-
-<p class="subtitle">
-A Conceptual and Technical Overview of Artificial Intelligence's Core Learning Mechanism
-</p>
-
-<p class="meta"><strong>Author:</strong> Punith Reddy</p>
-
-<p class="meta">
-<strong>Motivation:</strong> Inspired by the principle that if a complex idea cannot be explained simply, it is not fully understood.
-</p>
-
+<div class="page-title">
+<h1>Neural Networks – Artifact Documentation</h1>
+<p>This artifact combines technical depth with intuitive explanation, demonstrating the ability to communicate complex AI concepts through structured writing and modern web design.</p>
 </div>
 
-<!-- ABSTRACT -->
+<div class="grid">
 
-<div class="paper-card">
-
-<h2>Abstract</h2>
-
-<p>
-
-Artificial neural networks constitute one of the foundational computational
-models driving modern artificial intelligence. Despite their widespread
-application in fields such as computer vision, natural language processing,
-and predictive analytics, the underlying mechanisms often appear opaque to
-new learners.
-
-</p>
-
-<p>
-
-This article presents an intuitive yet technically grounded explanation of
-neural networks using a pedagogical analogy: a child learning to recognize
-animals through observation and repeated feedback. Through this framework,
-we describe the core architectural components of neural networks, including
-neurons, network layers, and optimization procedures.
-
-</p>
-
+<div class="card full">
+<h3>Title</h3>
+<p><strong>Neural Networks: Pattern-Mimicking Machine – Conceptual and Technical Article</strong></p>
 </div>
 
-<!-- GRID CONTENT -->
-
-<div class="paper-grid">
-
-<div class="paper-card">
-
-<h2>1. Learning Through Examples</h2>
-
+<div class="card">
+<h3>Objective</h3>
 <p>
-
-Human learning frequently occurs through exposure to examples rather than
-explicit rule-based instruction. For instance, when teaching a child to
-differentiate between cats and dogs, we typically present visual examples
-rather than formal definitions.
-
+The objective of this artifact was to develop a deep conceptual understanding of neural networks and present that understanding in a clear, intuitive format. The focus was on simplifying complex mathematical concepts using real-world analogies while maintaining technical accuracy.
 </p>
-
 <p>
-
-Over time the child begins to internalize patterns such as ear shape,
-snout length, or vocal sounds.
-
+This project also aimed to strengthen my technical communication, structured writing, and ability to design educational content for diverse audiences.
 </p>
+</div>
 
+<div class="card">
+<h3>Tools Used</h3>
 <ul>
-<li>Cats tend to have shorter snouts and triangular ears</li>
-<li>Dogs often possess longer snouts and different posture</li>
-<li>Vocal signals such as meowing or barking reinforce recognition</li>
+<li>HTML5</li>
+<li>CSS3</li>
+<li>Google Fonts</li>
+<li>Browser DevTools</li>
+<li>ChatGPT</li>
 </ul>
-
-<p>
-
-Artificial neural networks replicate this process computationally by
-learning statistical relationships between input features and labeled
-examples.
-
-</p>
-
 </div>
 
-<div class="paper-card">
-
-<h2>2. Artificial Neurons</h2>
-
-<p>
-
-The fundamental computational unit of a neural network is the artificial
-neuron. Conceptually inspired by biological neurons, this unit aggregates
-incoming signals and transforms them through a mathematical function.
-
-</p>
-
+<div class="card full">
+<h3>Process</h3>
 <ul>
-<li><strong>Inputs</strong> – numerical representations of data features</li>
-<li><strong>Weights</strong> – parameters determining feature importance</li>
-<li><strong>Bias</strong> – an adjustable offset enabling flexible boundaries</li>
-<li><strong>Activation Function</strong> – introduces non-linearity to the model</li>
+<li><strong>Research:</strong> Studied neural network fundamentals including neurons, layers, and training.</li>
+<li><strong>Concept Framing:</strong> Used a child-learning analogy to simplify understanding.</li>
+<li><strong>Structuring:</strong> Organized content into logical academic sections.</li>
+<li><strong>Writing:</strong> Balanced technical accuracy with clarity.</li>
+<li><strong>Design:</strong> Created a clean card-based layout for readability.</li>
+<li><strong>Iteration:</strong> Refined explanations and UI for clarity and flow.</li>
 </ul>
-
-<p>
-
-The neuron's output represents a transformed version of the input signal,
-which is then propagated to subsequent neurons within the network.
-
-</p>
-
 </div>
 
-<div class="paper-card">
-
-<h2>3. Network Architecture</h2>
-
+<div class="card full">
+<h3>Value Proposition</h3>
 <p>
-
-Individually, neurons perform simple transformations. However, when arranged
-in layered structures they become capable of modeling complex nonlinear
-relationships.
-
+This artifact demonstrates the ability to combine AI knowledge with effective communication and design. It highlights skills in simplifying complex systems, structuring technical content, and presenting it in an engaging format.
 </p>
-
 <ul>
-<li><strong>Input Layer</strong> – receives raw feature vectors</li>
-<li><strong>Hidden Layers</strong> – progressively extract abstract patterns</li>
-<li><strong>Output Layer</strong> – produces final prediction probabilities</li>
+<li>Technical concept simplification</li>
+<li>AI fundamentals understanding</li>
+<li>Front-end design and UX</li>
+<li>Structured thinking</li>
 </ul>
-
-<p>
-
-Deep neural networks extend this architecture with multiple hidden layers,
-allowing the system to learn hierarchical feature representations.
-
-</p>
-
 </div>
 
-<div class="paper-card">
-
-<h2>4. Learning via Optimization</h2>
-
+<div class="card full">
+<h3>Reflection</h3>
 <p>
-
-The learning process of a neural network involves iteratively adjusting its
-parameters in order to minimize prediction error.
-
+This project reinforced that true understanding comes from the ability to explain ideas clearly. By breaking down neural networks into intuitive concepts, I strengthened both my technical depth and communication skills.
 </p>
-
 <p>
-
-This occurs through a multi-step training cycle:
-
+It also highlighted the importance of iteration and clarity in both learning and design.
 </p>
+</div>
 
+<div class="card full">
+<h3>Skills Demonstrated</h3>
 <ul>
-<li>Forward propagation to generate predictions</li>
-<li>Loss computation to quantify prediction error</li>
-<li>Backpropagation to distribute error signals</li>
-<li>Gradient-based optimization to update weights</li>
+<li>Artificial Intelligence Fundamentals</li>
+<li>Neural Network Concepts</li>
+<li>Technical Writing</li>
+<li>UI/UX Design</li>
+<li>Analytical Thinking</li>
 </ul>
-
-<p>
-
-Over numerous iterations the network converges toward parameter values that
-capture underlying patterns present in the data.
-
-</p>
-
 </div>
 
 </div>
 
-<!-- CONCLUSION -->
-
-<div class="paper-card conclusion">
-
-<h2>Conclusion</h2>
-
-<p>
-
-Neural networks should not be interpreted as literal digital brains but
-rather as powerful mathematical frameworks capable of learning complex
-patterns from large datasets.
-
-</p>
-
-<p>
-
-Their capacity to autonomously discover hierarchical feature structures
-has made them the dominant paradigm in contemporary machine learning.
-Applications now span diverse domains including medical diagnostics,
-autonomous systems, recommendation engines, and language modeling.
-
-</p>
-
-<p>
-
-Developing a strong conceptual understanding of these mechanisms enables
-engineers and researchers to design more effective, interpretable, and
-scalable AI systems.
-
-</p>
-
+<div class="article">
+<h2>Artifact Preview</h2>
+<p>This section can include your original neural network article or a link to it, allowing viewers to connect the documentation with the actual work.</p>
 </div>
 
-</div>
+</section>
 
+<footer>© 2026 Punith Reddy</footer>
 </body>
 </html>
