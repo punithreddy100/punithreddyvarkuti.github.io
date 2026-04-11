@@ -1,391 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Machine Learning vs Deep Learning | Punith Reddy</title>
-
-<link rel="stylesheet" href="styles.css">
-
+<title>ML vs DL Artifact | Punith Reddy</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 <style>
+body{margin:0;font-family:"Space Grotesk",sans-serif;background:#020617;color:#e5e7eb;}
+header{display:flex;justify-content:space-between;padding:20px 40px;border-bottom:1px solid #1f2937;}
+header a{color:#22d3ee;text-decoration:none;}
+.section{padding:60px 40px;max-width:1100px;margin:auto;}
+.page-title{text-align:center;margin-bottom:50px;}
+.page-title h1{font-size:44px;background:linear-gradient(90deg,#a78bfa,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.page-title p{color:#9ca3af;max-width:750px;margin:auto;line-height:1.7;}
 
-/* PAGE TITLE */
+.artifact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:40px;}
 
-.page-title{
-text-align:center;
-margin-bottom:60px;
-}
+.card{background:#0f172a;padding:28px;border-radius:18px;border:1px solid #1f2937;transition:.3s;}
+.card:hover{transform:translateY(-6px);}
+.card h3{color:#22d3ee;margin-bottom:12px;font-size:20px;}
+.card p{color:#cbd5f5;line-height:1.8;font-size:15px;}
 
-.page-title h1{
-font-size:44px;
-margin-bottom:12px;
-font-family:"Space Grotesk",sans-serif;
-background:linear-gradient(90deg,#a78bfa,#22d3ee);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+.full-width{grid-column:1 / -1;}
 
-.page-title p{
-color:#9ca3af;
-font-size:16px;
-max-width:700px;
-margin:auto;
-}
+ul{padding-left:20px;color:#cbd5f5;line-height:1.8;font-size:15px;}
 
-/* SIDE BY SIDE COMPARISON */
-
-.comparison{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-margin-top:40px;
-}
-
-/* COMPARISON CARDS */
-
-.compare-card{
-background:linear-gradient(145deg,#111827,#1f2937);
-padding:32px;
-border-radius:16px;
-box-shadow:0 15px 35px rgba(0,0,0,0.5);
-border:1px solid rgba(255,255,255,0.05);
-transition:all .35s ease;
-position:relative;
-overflow:hidden;
-}
-
-.compare-card:hover{
-transform:translateY(-10px);
-box-shadow:0 30px 60px rgba(0,0,0,0.7);
-}
-
-/* subtle glow */
-
-.compare-card::before{
-content:"";
-position:absolute;
-top:-20%;
-right:-20%;
-width:200px;
-height:200px;
-background:radial-gradient(circle,#7c3aed33,transparent 70%);
-opacity:0;
-transition:0.4s;
-}
-
-.compare-card:hover::before{
-opacity:1;
-}
-
-.compare-card h2{
-color:#a78bfa;
-margin-bottom:15px;
-font-size:24px;
-font-family:"Space Grotesk",sans-serif;
-}
-
-.compare-card ul{
-line-height:1.8;
-color:#d1d5db;
-}
-
-/* EXAMPLES BOX */
-
-.example{
-margin-top:22px;
-padding:20px;
-background:linear-gradient(145deg,#0f172a,#111827);
-border-radius:12px;
-border-left:4px solid #22d3ee;
-color:#cbd5f5;
-font-size:14px;
-}
-
-/* TABLE SECTION */
-
-.table-section{
-margin-top:70px;
-}
-
-.table-section h2{
-font-family:"Space Grotesk",sans-serif;
-color:#a78bfa;
-margin-bottom:15px;
-}
-
-/* COMPARISON TABLE */
-
-.comparison-table{
-width:100%;
-border-collapse:collapse;
-margin-top:25px;
-background:linear-gradient(145deg,#111827,#1f2937);
-border-radius:14px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* HEADER */
-
-.comparison-table th{
-background:#0f172a;
-color:#22d3ee;
-font-weight:600;
-letter-spacing:.5px;
-}
-
-/* CELLS */
-
-.comparison-table th,
-.comparison-table td{
-padding:16px;
-border-bottom:1px solid #374151;
-text-align:left;
-}
-
-/* ROW HOVER */
-
-.comparison-table tr:hover{
-background:#0f172a;
-transition:0.2s;
-}
-
-/* LAST ROW BORDER FIX */
-
-.comparison-table tr:last-child td{
-border-bottom:none;
-}
-
-/* RESPONSIVE */
+footer{text-align:center;padding:20px;border-top:1px solid #1f2937;margin-top:40px;}
 
 @media(max-width:900px){
-
-.comparison{
-grid-template-columns:1fr;
+.artifact-grid{grid-template-columns:1fr;}
 }
-
-.page-title h1{
-font-size:34px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <h2>Punith Reddy</h2>
-
-<nav>
 <a href="index.html">← Back to Portfolio</a>
-</nav>
-
 </header>
-
 
 <section class="section">
 
 <div class="page-title">
-
-<h1>Machine Learning vs Deep Learning</h1>
-
+<h1>ML vs DL – Artifact Documentation</h1>
 <p>
-Understanding the differences between traditional Machine Learning
-and modern Deep Learning approaches used in artificial intelligence.
+This artifact represents a comprehensive exploration of Machine Learning and Deep Learning, combining technical understanding with front-end design to create an educational and visually structured experience. It demonstrates not only what was built, but how and why it was developed.
 </p>
-
 </div>
 
+<div class="artifact-grid">
 
-<!-- SIDE BY SIDE SECTION -->
+<div class="card full-width">
+<h3>Title</h3>
+<p><strong>Machine Learning vs Deep Learning – Comparative Analysis Web Artifact</strong></p>
+</div>
 
-<div class="comparison">
-
-
-<!-- MACHINE LEARNING -->
-
-<div class="compare-card">
-
-<h2>Machine Learning</h2>
-
+<div class="card">
+<h3>Objective</h3>
 <p>
-Machine Learning (ML) is a subset of Artificial Intelligence that enables
-computers to learn patterns from data and improve performance without
-being explicitly programmed for every task.
+The primary objective of this artifact was to develop a deep understanding of the conceptual and practical differences between Machine Learning (ML) and Deep Learning (DL). I aimed to translate complex technical knowledge into a clear, structured, and visually intuitive format that can be easily understood by both technical and non-technical audiences.
 </p>
-
-<ul>
-
-<li>Uses statistical algorithms to detect patterns</li>
-<li>Requires manual feature engineering</li>
-<li>Works well with structured datasets</li>
-<li>Requires smaller datasets compared to deep learning</li>
-<li>Training is faster and computationally cheaper</li>
-
-</ul>
-
-<div class="example">
-
-<strong>Common Algorithms</strong>
-
-<ul>
-
-<li>Linear Regression</li>
-<li>Decision Trees</li>
-<li>Random Forest</li>
-<li>Support Vector Machines (SVM)</li>
-<li>K-Nearest Neighbors (KNN)</li>
-
-</ul>
-
-<strong>Real-World Applications</strong>
-
-<ul>
-
-<li>Email spam detection</li>
-<li>Fraud detection systems</li>
-<li>Recommendation engines (Netflix, Amazon)</li>
-<li>Customer churn prediction</li>
-
-</ul>
-
-</div>
-
-</div>
-
-
-<!-- DEEP LEARNING -->
-
-<div class="compare-card">
-
-<h2>Deep Learning</h2>
-
 <p>
-Deep Learning (DL) is a specialized branch of Machine Learning that uses
-artificial neural networks with multiple layers to automatically learn
-complex representations from large amounts of data.
+Additionally, this project was designed to strengthen my ability to combine software development with knowledge communication. By building this artifact, I focused on improving my skills in structuring information, simplifying complex ideas, and designing user-friendly interfaces that enhance learning.
 </p>
+</div>
 
+<div class="card">
+<h3>Tools Used</h3>
 <ul>
-
-<li>Uses multi-layer neural networks</li>
-<li>Automatically extracts features from raw data</li>
-<li>Excels at unstructured data like images, text, and audio</li>
-<li>Requires very large datasets</li>
-<li>Needs powerful hardware like GPUs or TPUs</li>
-
+<li><strong>HTML5:</strong> Used to structure the content and define the layout of the artifact.</li>
+<li><strong>CSS3:</strong> Used for styling, layout design, responsiveness, and modern UI effects.</li>
+<li><strong>Google Fonts:</strong> Enhanced typography and readability.</li>
+<li><strong>Browser Developer Tools:</strong> Tested responsiveness and debugged layout issues.</li>
+<li><strong>ChatGPT:</strong> Assisted in refining explanations, structuring content, and improving clarity.</li>
 </ul>
+</div>
 
-<div class="example">
-
-<strong>Common Architectures</strong>
-
+<div class="card full-width">
+<h3>Process</h3>
 <ul>
-
-<li>Convolutional Neural Networks (CNN)</li>
-<li>Recurrent Neural Networks (RNN)</li>
-<li>Long Short-Term Memory (LSTM)</li>
-<li>Transformers</li>
-
+<li><strong>1. Research and Understanding:</strong> I studied the foundational concepts of Machine Learning and Deep Learning, including algorithms, neural network architectures, and their real-world applications.</li>
+<li><strong>2. Content Decomposition:</strong> I broke down the topic into manageable sections such as definitions, features, algorithms, use cases, and key differences to improve clarity.</li>
+<li><strong>3. Information Structuring:</strong> I designed a side-by-side comparison model to allow users to quickly grasp the differences between ML and DL.</li>
+<li><strong>4. UI/UX Design:</strong> I focused on creating a clean, modern interface with card-based layouts, consistent spacing, and visual hierarchy to enhance readability.</li>
+<li><strong>5. Development:</strong> I implemented the design using HTML and CSS, ensuring responsiveness across different screen sizes.</li>
+<li><strong>6. Iteration and Refinement:</strong> I continuously improved both the design and content by simplifying explanations, enhancing visual appeal, and ensuring accuracy.</li>
 </ul>
+</div>
 
-<strong>Real-World Applications</strong>
-
+<div class="card full-width">
+<h3>Value Proposition</h3>
+<p>
+This artifact demonstrates a unique combination of technical knowledge and communication skills. It highlights my ability to not only understand advanced AI concepts but also present them in a way that is accessible and engaging.
+</p>
+<p>
+From a professional perspective, this work is valuable because it reflects real-world skills that are highly sought after in the industry:
+</p>
 <ul>
-
-<li>Self-driving cars</li>
-<li>Facial recognition systems</li>
-<li>Voice assistants (Siri, Alexa)</li>
-<li>Medical image analysis</li>
-<li>Natural language processing</li>
-
+<li>Ability to simplify complex technical concepts for diverse audiences</li>
+<li>Strong front-end development and UI design capabilities</li>
+<li>Understanding of real-world AI applications and their implications</li>
+<li>Skill in structuring and presenting information clearly</li>
+<li>Bridging the gap between technical systems and user understanding</li>
 </ul>
+<p>
+In modern organizations, professionals are expected not only to build systems but also to explain and communicate them effectively. This artifact reflects that capability.
+</p>
+</div>
 
+<div class="card full-width">
+<h3>Reflection</h3>
+<p>
+Through the development of this artifact, I gained a deeper appreciation for the importance of clarity in both thinking and communication. While Machine Learning and Deep Learning are technically complex subjects, this project challenged me to break them down into their most essential ideas.
+</p>
+<p>
+I also realized that true understanding comes from the ability to teach and explain concepts simply. This aligns with the idea that if a concept cannot be explained clearly, it is not fully understood.
+</p>
+<p>
+Additionally, this project reinforced the importance of iteration—not just in machine learning models, but also in design and learning. By continuously refining both content and presentation, I improved the overall quality of the artifact.
+</p>
+<p>
+Overall, this experience strengthened my confidence in combining technical expertise with effective communication, which is a critical skill in the field of artificial intelligence and software development.
+</p>
 </div>
 
 </div>
-
-</div>
-
-
-<!-- COMPARISON TABLE -->
-
-<div class="table-section">
-
-<h2>Key Differences</h2>
-
-<table class="comparison-table">
-
-<tr>
-<th>Feature</th>
-<th>Machine Learning</th>
-<th>Deep Learning</th>
-</tr>
-
-<tr>
-<td>Data Requirement</td>
-<td>Small to Medium datasets</td>
-<td>Very Large datasets</td>
-</tr>
-
-<tr>
-<td>Feature Engineering</td>
-<td>Manual feature extraction</td>
-<td>Automatic feature learning</td>
-</tr>
-
-<tr>
-<td>Training Time</td>
-<td>Faster training</td>
-<td>Slower training due to complex networks</td>
-</tr>
-
-<tr>
-<td>Hardware</td>
-<td>CPU usually sufficient</td>
-<td>Requires GPU / TPU acceleration</td>
-</tr>
-
-<tr>
-<td>Interpretability</td>
-<td>More interpretable models</td>
-<td>Often considered a "black box"</td>
-</tr>
-
-<tr>
-<td>Common Models</td>
-<td>Decision Trees, SVM, Regression</td>
-<td>CNN, RNN, Transformers</td>
-</tr>
-
-<tr>
-<td>Best For</td>
-<td>Structured data problems</td>
-<td>Images, speech, text, and complex patterns</td>
-</tr>
-
-</table>
-
-</div>
-
 
 </section>
 
-
 <footer>
-
 © 2026 Punith Reddy
-
 </footer>
 
-
 </body>
-
 </html>
