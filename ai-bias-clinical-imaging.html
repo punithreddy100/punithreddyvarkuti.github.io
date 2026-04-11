@@ -4,65 +4,127 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Bias in Clinical Imaging | Punith Reddy</title>
-  <link rel="stylesheet" href="styles.css">
 
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      background: #1e2a38;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
     .container {
       max-width: 1100px;
       margin: auto;
+      padding: 30px 20px;
     }
 
     .hero-title {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .hero-title h1 {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
+      margin-bottom: 10px;
     }
 
     .hero-title p {
       color: #555;
       max-width: 800px;
       margin: auto;
+      line-height: 1.6;
     }
 
     .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 20px;
     }
 
     .card {
       background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: 0.3s;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     .card h2 {
+      color: #1e2a38;
       margin-bottom: 10px;
-      color: #2c3e50;
     }
 
     .card h3 {
-      margin-top: 10px;
+      margin-top: 15px;
       color: #444;
+    }
+
+    .card p {
+      line-height: 1.6;
     }
 
     .card ul {
       margin-left: 20px;
+      line-height: 1.6;
     }
 
     .highlight {
       border-left: 4px solid #0077ff;
-      padding-left: 10px;
-      margin-top: 10px;
+      padding-left: 12px;
+      margin-top: 15px;
+      color: #333;
+      background: #f0f6ff;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .artifact-section {
+      margin-top: 40px;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .artifact-section h2 {
+      margin-bottom: 15px;
+      color: #1e2a38;
+    }
+
+    .artifact-item {
+      margin-bottom: 15px;
+    }
+
+    .artifact-item strong {
+      color: #0077ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e2a38;
+      color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -78,124 +140,137 @@
   </nav>
 </header>
 
-<section class="section container">
+<section class="container">
 
   <!-- HERO -->
   <div class="hero-title">
-    <h1>Problems of Confusion: AI Bias in Clinical Diagnostic Imaging</h1>
+    <h1>AI Bias in Clinical Diagnostic Imaging</h1>
     <p>
-      Exploring how bias in AI-powered medical imaging systems impacts diagnostic accuracy,
-      fairness, and real-world healthcare outcomes.
+      A comprehensive exploration of how bias in AI-driven medical imaging systems impacts diagnostic accuracy,
+      fairness, and ethical decision-making in real-world healthcare environments.
     </p>
   </div>
 
-  <!-- GRID START -->
+  <!-- MAIN CONTENT -->
   <div class="grid-2">
 
-    <!-- CARD 1 -->
     <div class="card">
-      <h2>What is AI Bias?</h2>
+      <h2>Understanding AI Bias</h2>
       <p>
-        AI bias refers to systematic errors in machine learning models that result in unfair
-        or inaccurate predictions. In clinical imaging, this leads to unequal diagnostic
-        performance across patient populations.
+        AI bias refers to systematic errors that occur when machine learning models produce
+        skewed or unfair outcomes due to limitations in data or design. In clinical imaging,
+        this directly affects diagnostic reliability.
       </p>
-
       <ul>
-        <li>Misdiagnosis in underrepresented groups</li>
-        <li>Overfitting to dominant datasets</li>
-        <li>Poor generalization in real-world settings</li>
+        <li>Unequal performance across demographics</li>
+        <li>Model overfitting to dominant datasets</li>
+        <li>Reduced clinical reliability</li>
       </ul>
     </div>
 
-    <!-- CARD 2 -->
     <div class="card">
       <h2>Sources of Bias</h2>
-
       <h3>Data Bias</h3>
-      <p>Datasets lack diversity across age, ethnicity, and geography.</p>
+      <p>Training datasets lack diversity across populations.</p>
 
       <h3>Labeling Bias</h3>
-      <p>Radiologist interpretation differences create inconsistent labels.</p>
+      <p>Human interpretation inconsistencies affect labels.</p>
 
       <h3>Algorithmic Bias</h3>
-      <p>Models prioritize majority classes over minority cases.</p>
+      <p>Models favor majority patterns over minority cases.</p>
     </div>
 
-    <!-- CARD 3 -->
     <div class="card">
       <h2>Real-World Impact</h2>
-
       <ul>
-        <li>Delayed or incorrect diagnoses</li>
-        <li>Healthcare inequality</li>
-        <li>Reduced trust in AI systems</li>
+        <li>Incorrect or delayed diagnoses</li>
+        <li>Healthcare disparities</li>
+        <li>Loss of trust in AI systems</li>
       </ul>
 
       <div class="highlight">
-        Example: Models trained on limited skin tone data may fail on diverse populations.
+        Example: AI models trained on limited datasets may fail when applied to diverse populations.
       </div>
     </div>
 
-    <!-- CARD 4 -->
     <div class="card">
       <h2>The Problem of Confusion</h2>
-
       <p>
-        AI systems often struggle to distinguish between similar patterns in imaging data.
+        AI models often struggle to distinguish between visually similar medical patterns,
+        leading to diagnostic ambiguity.
       </p>
-
       <ul>
-        <li>Benign vs malignant tumor confusion</li>
+        <li>Benign vs malignant classification errors</li>
         <li>Noise interpreted as disease</li>
-        <li>Overfitting to irrelevant features</li>
+        <li>Feature misinterpretation</li>
       </ul>
     </div>
 
-    <!-- CARD 5 -->
     <div class="card">
-      <h2>Ethical Concerns</h2>
-
+      <h2>Ethical Considerations</h2>
       <ul>
-        <li>Fairness across all patients</li>
-        <li>Accountability for AI decisions</li>
-        <li>Safety in clinical deployment</li>
+        <li>Fairness in patient treatment</li>
+        <li>Transparency of AI decisions</li>
+        <li>Clinical accountability</li>
       </ul>
 
       <p class="highlight">
-        Ethical AI requires transparency, monitoring, and human oversight.
+        Ethical AI requires continuous monitoring, validation, and human oversight.
       </p>
     </div>
 
-    <!-- CARD 6 -->
     <div class="card">
-      <h2>Solutions</h2>
-
+      <h2>Proposed Solutions</h2>
       <ul>
-        <li><strong>Diverse Data:</strong> Improve representation</li>
-        <li><strong>Bias Testing:</strong> Evaluate across demographics</li>
-        <li><strong>Explainable AI:</strong> Understand model decisions</li>
-        <li><strong>Human-in-the-loop:</strong> Keep clinicians involved</li>
+        <li>Diverse and representative datasets</li>
+        <li>Bias detection and evaluation metrics</li>
+        <li>Explainable AI techniques</li>
+        <li>Human-in-the-loop systems</li>
       </ul>
     </div>
 
-    <!-- CARD 7 -->
-    <div class="card" style="grid-column: span 2;">
-      <h2>Reflection</h2>
+  </div>
 
-      <p>
-        This project emphasizes that AI in healthcare must go beyond accuracy.
-        Fairness, transparency, and ethical responsibility are critical for
-        building trustworthy systems.
-      </p>
+  <!-- ARTIFACT INFORMATION -->
+  <div class="artifact-section">
+    <h2>Artifact Information</h2>
 
-      <p>
-        As an aspiring AI/ML engineer, I recognize the importance of designing
-        systems that enhance human decision-making while minimizing risk and bias.
-      </p>
+    <div class="artifact-item">
+      <p><strong>Title:</strong> AI Bias in Clinical Diagnostic Imaging</p>
+    </div>
+
+    <div class="artifact-item">
+      <p><strong>Objective:</strong>  
+      The objective of this artifact is to analyze how bias in artificial intelligence systems
+      affects diagnostic imaging outcomes and to understand the importance of fairness,
+      accuracy, and ethical responsibility in healthcare AI applications.</p>
+    </div>
+
+    <div class="artifact-item">
+      <p><strong>Process:</strong>  
+      This artifact was developed through a structured process that included researching
+      academic literature on AI bias, analyzing real-world case studies in medical imaging,
+      identifying key sources of bias, and synthesizing findings into a clear and structured
+      format. The content was then organized into a user-friendly web layout using a card-based design.</p>
+    </div>
+
+    <div class="artifact-item">
+      <p><strong>Tools Used:</strong>  
+      HTML, CSS, and modern web design principles were used to build the interface.  
+      Research sources included academic journals, online publications, and AI ethics frameworks.  
+      AI-assisted tools were used to refine structure and improve clarity of content.</p>
+    </div>
+
+    <div class="artifact-item">
+      <p><strong>Value Proposition:</strong>  
+      This artifact demonstrates my ability to combine technical knowledge of AI/ML with
+      critical thinking about ethical implications. It highlights skills in research,
+      problem analysis, and professional presentation, making it relevant for real-world
+      applications in healthcare technology and responsible AI development.</p>
     </div>
 
   </div>
+
 </section>
 
 <footer>
