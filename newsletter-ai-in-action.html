@@ -3,242 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI in Action Newsletter</title>
+  <title>AI in Action Artifact | Punith Reddy</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+      font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background:#f4f6f9;
+      color:#333;
+      line-height:1.6;
     }
 
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f6f9;
-      color: #333;
-      line-height: 1.6;
+    .site-header{
+      background:linear-gradient(135deg,#1e3c72,#2a5298);
+      color:white;
+      padding:60px 20px;
+      text-align:center;
     }
 
-    /* Header */
-    .site-header {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
+    .header-content{max-width:900px;margin:auto;}
+
+    .site-header h1{font-size:2.5rem;margin-bottom:10px;}
+    .site-header p{opacity:.9;margin-bottom:10px;}
+
+    .back-link{
+      color:#fff;
+      text-decoration:none;
+      border-bottom:1px solid rgba(255,255,255,0.6);
     }
 
-    .header-content {
-      max-width: 900px;
-      margin: 0 auto;
+    .newsletter{
+      max-width:1000px;
+      margin:-40px auto 40px;
+      padding:0 20px;
     }
 
-    .site-header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
+    .card{
+      background:#fff;
+      padding:28px;
+      margin-bottom:20px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
     }
 
-    .site-header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      margin-bottom: 15px;
+    h2{color:#1e3c72;margin-bottom:12px;}
+    h3{color:#2a5298;margin-top:10px;margin-bottom:6px;}
+
+    ul{padding-left:20px;}
+    li{margin-bottom:6px;}
+
+    .section-title{
+      margin-top:40px;
+      font-size:1.6rem;
+      color:#111827;
+      border-bottom:2px solid #e5e7eb;
+      padding-bottom:6px;
     }
 
-    .back-link {
-      display: inline-block;
-      color: #fff;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.6);
-      font-size: 0.95rem;
+    .chart{margin-top:15px;}
+    .bar-row{margin-bottom:10px;}
+    .bar{
+      height:25px;
+      background:linear-gradient(90deg,#4facfe,#00f2fe);
+      border-radius:20px;
+      width:var(--value);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      padding-right:10px;
+      font-size:0.85rem;
     }
 
-    /* Main Layout */
-    .newsletter {
-      max-width: 1000px;
-      margin: -40px auto 40px;
-      padding: 0 20px;
-    }
-
-    /* Cards */
-    .card {
-      background: #fff;
-      padding: 30px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    h2 {
-      margin-bottom: 15px;
-      color: #1e3c72;
-    }
-
-    h3 {
-      margin-top: 15px;
-      margin-bottom: 8px;
-      color: #2a5298;
-    }
-
-    p {
-      margin-bottom: 12px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    /* Chart */
-    .chart {
-      margin-top: 20px;
-    }
-
-    .bar-row {
-      margin-bottom: 15px;
-    }
-
-    .bar-row span {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 500;
-    }
-
-    .bar {
-      height: 28px;
-      border-radius: 20px;
-      background: linear-gradient(90deg, #4facfe, #00f2fe);
-      width: var(--value);
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding-right: 10px;
-      color: #fff;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .site-header h1 {
-        font-size: 2rem;
-      }
-
-      .newsletter {
-        margin-top: -20px;
-      }
-
-      .card {
-        padding: 20px;
-      }
+    @media(max-width:768px){
+      .site-header h1{font-size:2rem;}
     }
   </style>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="header-content">
-      <h1>AI in Action</h1>
-      <p>How Businesses Are Using AI Right Now</p>
-      <a class="back-link" href="index.html#artifacts">← Back to Artifacts</a>
+<header class="site-header">
+  <div class="header-content">
+    <h1>AI in Action – Artifact Documentation</h1>
+    <p>Portfolio Artifact Demonstrating AI Industry Applications</p>
+    <a class="back-link" href="index.html#artifacts">← Back to Artifacts</a>
+  </div>
+</header>
+
+<main class="newsletter">
+
+  <!-- REQUIRED METADATA -->
+
+  <div class="card">
+    <h2>Title</h2>
+    <p><strong>AI in Action – Industry Applications Newsletter</strong></p>
+  </div>
+
+  <div class="card">
+    <h2>Objective</h2>
+    <p>
+      I created this artifact to explore how Artificial Intelligence is being applied across real-world industries. The goal was to present practical AI use cases in a clear and structured format that is easy to understand for a broad audience.
+    </p>
+    <p>
+      This project also helped me improve my ability to communicate business-focused AI insights through structured content and clean visual design.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Tools</h2>
+    <ul>
+      <li><strong>HTML5:</strong> Structured the newsletter content</li>
+      <li><strong>CSS3:</strong> Designed layout and visual presentation</li>
+      <li><strong>Browser DevTools:</strong> Testing and layout adjustments</li>
+      <li><strong>ChatGPT:</strong> Assisted in refining content and structure</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Process</h2>
+    <ul>
+      <li><strong>Research:</strong> Identified real-world AI applications in healthcare, finance, and retail</li>
+      <li><strong>Content Organization:</strong> Structured the newsletter into sections for clarity</li>
+      <li><strong>Simplification:</strong> Translated technical concepts into business-friendly language</li>
+      <li><strong>Design:</strong> Built a clean card-based UI for readability</li>
+      <li><strong>Iteration:</strong> Improved layout and content clarity through revisions</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Value Proposition</h2>
+    <p>
+      This artifact demonstrates my ability to connect AI concepts with real-world business applications and communicate them effectively.
+    </p>
+
+    <ul>
+      <li>Understanding of AI industry use cases</li>
+      <li>Ability to communicate technical ideas in simple terms</li>
+      <li>Content structuring and storytelling</li>
+      <li>Front-end design and presentation skills</li>
+    </ul>
+
+    <p>
+      This work shows that I can bridge the gap between technical knowledge and business understanding, which is highly valuable in modern organizations.
+    </p>
+  </div>
+
+  <!-- ACTUAL ARTIFACT CONTENT -->
+
+  <h2 class="section-title">Artifact Content</h2>
+
+  <section class="card">
+    <h2>Introduction</h2>
+    <p>
+      Artificial Intelligence is no longer a futuristic concept. It is actively transforming how organizations operate today.
+    </p>
+    <p>
+      This newsletter highlights three industries where AI is creating measurable impact: healthcare, finance, and retail.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Healthcare</h2>
+    <p>AI helps detect diseases using medical imaging.</p>
+  </section>
+
+  <section class="card">
+    <h2>Finance</h2>
+    <p>AI detects fraud and improves risk management.</p>
+  </section>
+
+  <section class="card">
+    <h2>Retail</h2>
+    <p>AI enables personalized shopping experiences.</p>
+  </section>
+
+  <section class="card">
+    <h2>AI Adoption Rates</h2>
+    <div class="chart">
+      <div class="bar-row"><div class="bar" style="--value:68%">68%</div></div>
+      <div class="bar-row"><div class="bar" style="--value:82%">82%</div></div>
+      <div class="bar-row"><div class="bar" style="--value:74%">74%</div></div>
     </div>
-  </header>
+  </section>
 
-  <main class="newsletter">
+  <section class="card">
+    <h2>Conclusion</h2>
+    <p>
+      AI is transforming industries and improving decision-making, efficiency, and customer experience.
+    </p>
+  </section>
 
-    <section class="card">
-      <h2>Introduction</h2>
-      <p>
-        Artificial Intelligence is no longer a futuristic concept. It is actively transforming how organizations operate today.
-      </p>
-      <p>
-        This newsletter highlights three industries where AI is creating clear and measurable impact right now: healthcare, finance, and retail.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Industries Covered</h2>
-      <ul>
-        <li>Healthcare</li>
-        <li>Finance</li>
-        <li>Retail</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Healthcare: Smarter Diagnosis</h2>
-      <h3>Use Case</h3>
-      <p>AI analyzes medical images like X-rays and MRIs to detect diseases early.</p>
-
-      <h3>Impact</h3>
-      <p>Faster diagnosis, improved care, and reduced workload for doctors.</p>
-
-      <h3>Future</h3>
-      <p>Real-time AI assistance in hospitals worldwide.</p>
-    </section>
-
-    <section class="card">
-      <h2>Finance: Fraud Detection</h2>
-      <h3>Use Case</h3>
-      <p>AI monitors transactions and flags suspicious activity.</p>
-
-      <h3>Impact</h3>
-      <p>Reduced fraud losses and better risk management.</p>
-
-      <h3>Future</h3>
-      <p>More predictive systems to prevent fraud early.</p>
-    </section>
-
-    <section class="card">
-      <h2>Retail: Personalized Shopping</h2>
-      <h3>Use Case</h3>
-      <p>AI recommends products based on user behavior.</p>
-
-      <h3>Impact</h3>
-      <p>Higher sales, better customer experience.</p>
-
-      <h3>Future</h3>
-      <p>Fully personalized shopping journeys.</p>
-    </section>
-
-    <section class="card">
-      <h2>AI Adoption Rates</h2>
-      <div class="chart">
-        <div class="bar-row">
-          <span>Healthcare</span>
-          <div class="bar" style="--value: 68%">68%</div>
-        </div>
-
-        <div class="bar-row">
-          <span>Finance</span>
-          <div class="bar" style="--value: 82%">82%</div>
-        </div>
-
-        <div class="bar-row">
-          <span>Retail</span>
-          <div class="bar" style="--value: 74%">74%</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Conclusion</h2>
-      <p>
-        AI is reshaping industries by improving decision-making, efficiency, and customer experience.
-      </p>
-      <p>
-        Organizations that adopt AI responsibly will gain long-term advantages.
-      </p>
-    </section>
-
-  </main>
+</main>
 
 </body>
 </html>
