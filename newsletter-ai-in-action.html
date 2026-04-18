@@ -1,148 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI in Action Newsletter</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI in Action Newsletter</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .site-header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .header-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .site-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .site-header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 15px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+    }
+
+    /* Main Layout */
+    .newsletter {
+      max-width: 1000px;
+      margin: -40px auto 40px;
+      padding: 0 20px;
+    }
+
+    /* Cards */
+    .card {
+      background: #fff;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #1e3c72;
+    }
+
+    h3 {
+      margin-top: 15px;
+      margin-bottom: 8px;
+      color: #2a5298;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Chart */
+    .chart {
+      margin-top: 20px;
+    }
+
+    .bar-row {
+      margin-bottom: 15px;
+    }
+
+    .bar-row span {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .bar {
+      height: 28px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      width: var(--value);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .site-header h1 {
+        font-size: 2rem;
+      }
+
+      .newsletter {
+        margin-top: -20px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-content">
       <h1>AI in Action</h1>
       <p>How Businesses Are Using AI Right Now</p>
       <a class="back-link" href="index.html#artifacts">← Back to Artifacts</a>
-    </header>
+    </div>
+  </header>
 
-    <main class="newsletter">
-      <section class="card">
-        <h2>Introduction</h2>
-        <p>
-          Artificial Intelligence is no longer a futuristic concept. It is
-          actively transforming how organizations operate today. Across
-          industries, companies are using AI to improve efficiency, make smarter
-          decisions, and deliver better customer experiences.
-        </p>
-        <p>
-          This newsletter highlights three industries where AI is creating clear
-          and measurable impact right now: healthcare, finance, and retail.
-        </p>
-      </section>
+  <main class="newsletter">
 
-      <section class="card">
-        <h2>Industries Covered</h2>
-        <ul>
-          <li>Healthcare</li>
-          <li>Finance</li>
-          <li>Retail</li>
-        </ul>
-      </section>
+    <section class="card">
+      <h2>Introduction</h2>
+      <p>
+        Artificial Intelligence is no longer a futuristic concept. It is actively transforming how organizations operate today.
+      </p>
+      <p>
+        This newsletter highlights three industries where AI is creating clear and measurable impact right now: healthcare, finance, and retail.
+      </p>
+    </section>
 
-      <section class="card">
-        <h2>Healthcare: Smarter Diagnosis and Faster Decisions</h2>
-        <h3>Use Case</h3>
-        <p>
-          AI-powered models are used to analyze medical images such as X-rays,
-          CT scans, and MRI scans to detect diseases earlier and with higher
-          accuracy. Companies such as Google DeepMind have demonstrated how AI
-          can support clinicians in pattern recognition tasks.
-        </p>
-        <h3>Impact on Business &amp; Decision-Making</h3>
-        <p>
-          Healthcare providers can reduce diagnosis time and improve quality of
-          care. Faster insights help doctors focus more on treatment and patient
-          communication rather than spending excessive time on manual analysis.
-          Better workflows can also reduce operational costs for hospitals.
-        </p>
-        <h3>Future Potential</h3>
-        <p>
-          AI is expected to become a standard support tool in hospitals,
-          assisting doctors in real time and helping improve access to quality
-          healthcare globally, especially in areas with limited specialist
-          availability.
-        </p>
-      </section>
+    <section class="card">
+      <h2>Industries Covered</h2>
+      <ul>
+        <li>Healthcare</li>
+        <li>Finance</li>
+        <li>Retail</li>
+      </ul>
+    </section>
 
-      <section class="card">
-        <h2>Finance: Fraud Detection and Risk Management</h2>
-        <h3>Use Case</h3>
-        <p>
-          Financial institutions and digital payment platforms use AI systems to
-          monitor large transaction volumes and detect unusual behavior patterns
-          that may indicate fraud.
-        </p>
-        <h3>Impact on Business &amp; Decision-Making</h3>
-        <p>
-          AI allows banks and payment providers to intervene before fraudulent
-          activity escalates. This lowers financial losses and strengthens
-          customer trust. AI also improves credit scoring and risk assessment,
-          resulting in more consistent lending decisions.
-        </p>
-        <h3>Future Potential</h3>
-        <p>
-          Future AI systems in finance are likely to become more predictive,
-          identifying risk signals earlier and enabling proactive defense
-          strategies before suspicious activity becomes severe.
-        </p>
-      </section>
+    <section class="card">
+      <h2>Healthcare: Smarter Diagnosis</h2>
+      <h3>Use Case</h3>
+      <p>AI analyzes medical images like X-rays and MRIs to detect diseases early.</p>
 
-      <section class="card">
-        <h2>Retail: Personalized Shopping Experience</h2>
-        <h3>Use Case</h3>
-        <p>
-          Retailers use AI to analyze customer preferences, purchase history,
-          browsing behavior, and engagement patterns to deliver personalized
-          product recommendations.
-        </p>
-        <h3>Impact on Business &amp; Decision-Making</h3>
-        <p>
-          Businesses gain stronger insight into customer needs, which can improve
-          conversion rates, customer satisfaction, and loyalty. AI also supports
-          inventory planning, demand forecasting, and supply chain efficiency.
-        </p>
-        <h3>Future Potential</h3>
-        <p>
-          Retail experiences are expected to become increasingly individualized,
-          with AI shaping product discovery, pricing strategies, and customer
-          journeys around each shopper’s unique profile.
-        </p>
-      </section>
+      <h3>Impact</h3>
+      <p>Faster diagnosis, improved care, and reduced workload for doctors.</p>
 
-      <section class="card">
-        <h2>AI Adoption Rates in Healthcare, Finance, and Retail</h2>
-        <p>
-          Approximate 2026 adoption snapshot (illustrative) showing how broadly
-          AI is being integrated into operations.
-        </p>
-        <div class="chart">
-          <div class="bar-row">
-            <span>Healthcare</span>
-            <div class="bar" style="--value: 68%"><strong>68%</strong></div>
-          </div>
-          <div class="bar-row">
-            <span>Finance</span>
-            <div class="bar" style="--value: 82%"><strong>82%</strong></div>
-          </div>
-          <div class="bar-row">
-            <span>Retail</span>
-            <div class="bar" style="--value: 74%"><strong>74%</strong></div>
-          </div>
+      <h3>Future</h3>
+      <p>Real-time AI assistance in hospitals worldwide.</p>
+    </section>
+
+    <section class="card">
+      <h2>Finance: Fraud Detection</h2>
+      <h3>Use Case</h3>
+      <p>AI monitors transactions and flags suspicious activity.</p>
+
+      <h3>Impact</h3>
+      <p>Reduced fraud losses and better risk management.</p>
+
+      <h3>Future</h3>
+      <p>More predictive systems to prevent fraud early.</p>
+    </section>
+
+    <section class="card">
+      <h2>Retail: Personalized Shopping</h2>
+      <h3>Use Case</h3>
+      <p>AI recommends products based on user behavior.</p>
+
+      <h3>Impact</h3>
+      <p>Higher sales, better customer experience.</p>
+
+      <h3>Future</h3>
+      <p>Fully personalized shopping journeys.</p>
+    </section>
+
+    <section class="card">
+      <h2>AI Adoption Rates</h2>
+      <div class="chart">
+        <div class="bar-row">
+          <span>Healthcare</span>
+          <div class="bar" style="--value: 68%">68%</div>
         </div>
-      </section>
 
-      <section class="card">
-        <h2>Conclusion</h2>
-        <p>
-          AI is already reshaping business operations across industries. From
-          improving healthcare decisions to preventing fraud and enhancing
-          customer experiences, AI has become an essential tool for modern
-          organizations.
-        </p>
-        <p>
-          As these technologies mature, their impact will continue to grow.
-          Organizations that adopt AI responsibly, strategically, and ethically
-          will be better positioned for long-term competitive advantage.
-        </p>
-      </section>
-    </main>
-  </body>
+        <div class="bar-row">
+          <span>Finance</span>
+          <div class="bar" style="--value: 82%">82%</div>
+        </div>
+
+        <div class="bar-row">
+          <span>Retail</span>
+          <div class="bar" style="--value: 74%">74%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Conclusion</h2>
+      <p>
+        AI is reshaping industries by improving decision-making, efficiency, and customer experience.
+      </p>
+      <p>
+        Organizations that adopt AI responsibly will gain long-term advantages.
+      </p>
+    </section>
+
+  </main>
+
+</body>
 </html>
